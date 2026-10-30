@@ -58,7 +58,7 @@ PostgreSQL (primary)
 | `vrp-web`       | Пошук, картка акта, фасети, HTML + JSON API           | Bandit + Plug + Req + Jason |
 | `vrp-indexer`   | Повна індексація PostgreSQL → OpenSearch (CLI)        | Elixir CLI (escript / mix)  |
 | `vrp-updater`   | Слухає зміни в PostgreSQL і пушить в OpenSearch       | Elixir (LISTEN/NOTIFY або polling) |
-| Redis (опц.)    | Fragment-cache HTML + rate-limit                      | Redix                       |
+| Cache           | Fragment-cache HTML + rate-limit                      | ETS                         |
 
 PostgreSQL — єдине місце, куди пише Pentry (або зовнішні системи). Elixir **ніколи** не пише в PostgreSQL у звичайному режимі (тільки читає для індексації).
 
