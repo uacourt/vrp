@@ -25,7 +25,7 @@
   [ vrp-web ] читає тільки локальний OpenSearch
 
 Кейс 3: Чистий Cloud / App-сервер
-  [ vrp-web ] → Remote OpenSearch + Remote Redis
+  [ vrp-web ] → Remote OpenSearch + Remote ETS
   (усі інфраструктурні сервіси зовнішні, конфіг через ENV)
 
 Кейс 4: Docker Compose (production-ready)
@@ -160,7 +160,7 @@ make compose-down
 | OracleIndexer             | vrp-indexer                       |
 | (немає окремого updater)  | vrp-updater (окремий сервіс)      |
 | Elasticsearch             | OpenSearch                        |
-| Redis fragment cache      | Erlang VM ETS                     |
+| Redis fragment cache      | Erlang VM ETS Fragment Cache      |
 | HTMX 4                    | HTMX 4 (той самий підхід)         |
 
 ---
